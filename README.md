@@ -1,33 +1,87 @@
-# Smart-Contract
-Interact your smart-contract with frontend and connect it to MetaMask Wallet
-In this section we will be connecting our smart contract with the frontend and a METAMASK wallet to deposite or withdraw Ethers.
+# Smart Contract Interaction
 
-# Description
-It contains 3 Files namely deploy.js, index.js and SmartContract.sol in the 3 folders Scripts, Pages and Contracts respectively.
+This project demonstrates how to interact with a smart contract using a frontend and connect it to a MetaMask wallet for depositing or withdrawing Ether.
 
-# Getting Started
-To run this program, you can use gitpod by clicking the link https://metacrafterc-scmstarter-endrfexphsa.ws-us114.gitpod.io/
+## Description
 
-Executing program for frontend and smart contract
-copy and paste the index.js, SmartContract.sol and deploy.js from the repository into your gitpod website.
-Remember index.js contains the frontend code.
-Open two additional terminals in your gitpod
-In the second terminal type: npx hardhat node
-In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
-Back in the first terminal, type npm run dev to launch the front-end. After this, the project will be running on your localhost. Typically at http://localhost:3000/
-wallet setup
-To interact with the smart contract, we need to set up a network with the MetaMask wallet.
+The project consists of three files:
+- **deploy.js** (located in the `Scripts` folder)
+- **index.js** (located in the `Pages` folder)
+- **SmartContract.sol** (located in the `Contracts` folder)
 
-Click on the MetaMask extension and then click on the top right button -> settings.
-Click on "Add a Network."
-Click on "Add a Network Manually."
-Give the Network name (whatever you want).
-Set the New RPC URL to http:https://8545-metacrafterc-scmstarter-kodhc8ve1v6.ws-us114.gitpod.io
-Set the Chain ID to 31337.
-Set the Currency symbol. Now, set the MetaMask wallet network to the newly created network.
-To set up an account, you have to import the account's private key, which you can find in the second terminal where we executed the command npx hardhat node. After that, you can see there are many account numbers with private keys written in the terminal.Take any account's private key to import it to your Metamask Wallet.And Now your imported account is coonect to our METAMASK wallet and hence we can transfer our ethers.
+These files work together to enable interactions between the smart contract, frontend, and MetaMask wallet.
 
-Now open http://localhost:3000/ again and now you can interact with your frontend and METAMASK wallet and transfer tokens accordingly.
+## Getting Started
 
-# License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+### Installing
+
+You can get started by using Gitpod. Click the link below to open the project in Gitpod:
+[Gitpod Link](https://metacrafterc-scmstarter-endrfexphsa.ws-us114.gitpod.io/)
+
+Make sure to copy and paste the following files from the repository into your Gitpod environment:
+- `index.js` (frontend code)
+- `SmartContract.sol`
+- `deploy.js`
+
+### Modifications
+No modifications are required to run the program. 
+
+### Executing the Program
+
+1. **Setting up the environment:**
+   - Open three terminals in your Gitpod workspace.
+   
+2. **Deploying the smart contract:**
+   - In the second terminal, run the following command to start the Hardhat node:
+     ```bash
+     npx hardhat node
+     ```
+   - In the third terminal, deploy the contract:
+     ```bash
+     npx hardhat run --network localhost scripts/deploy.js
+     ```
+
+3. **Launching the frontend:**
+   - In the first terminal, start the frontend server:
+     ```bash
+     npm run dev
+     ```
+   - The project will be accessible at `http://localhost:3000`.
+
+### Wallet Setup
+
+To interact with the smart contract, you must set up a network in your MetaMask wallet.
+
+1. Open MetaMask and navigate to the settings.
+2. Click "Add a Network," then "Add a Network Manually."
+3. Enter the following details:
+   - **Network name:** (choose any name)
+   - **New RPC URL:** `https://8545-metacrafterc-scmstarter-kodhc8ve1v6.ws-us114.gitpod.io`
+   - **Chain ID:** `31337`
+   - **Currency symbol:** (optional)
+4. Import an account using a private key from the second terminal where `npx hardhat node` was executed. Choose any account and copy its private key to import it into MetaMask.
+
+Now, you can interact with the smart contract through MetaMask.
+
+### Transferring Ether
+
+Visit `http://localhost:3000/` again. You can now interact with the frontend, MetaMask wallet, and transfer Ether or tokens as per the smart contract's functionality.
+
+## Help
+
+If you encounter any issues:
+- Ensure that your Hardhat node is running (`npx hardhat node`).
+- Check the MetaMask network configuration and private key import.
+
+Common command to check for errors:
+```bash
+npx hardhat help
+```
+
+## Authors
+
+- **Nivedita Srivastava** - [GitHub Profile](https://github.com/NiveditaSri)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
